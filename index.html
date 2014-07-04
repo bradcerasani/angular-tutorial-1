@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  <div class="container" ng-init="books=[{'name': 'Effective Java', 'author': 'Joshua Bloch'}, {'name': 'Year without Pants', 'author': 'Scott Berkun'}, {'name': 'Confessions of a Public Speaker', 'author': 'Scott Berkun'}, {'name': 'Javascript, the Good Parts', 'author': 'Douglas Crockford'}]">
+  <div class="container" ng-controller="BookController">
     <h2>Your Online Bookshop</h2>
     <input type="search" ng-model="criteria">
     <ul class="unstyled">
@@ -18,5 +18,6 @@
   </div>
 
 <script src="app/bower_components/angular/angular.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
