@@ -9,8 +9,9 @@
 
   <div class="container" ng-init="books=[{'name': 'Effective Java', 'author': 'Joshua Bloch'}, {'name': 'Year without Pants', 'author': 'Scott Berkun'}, {'name': 'Confessions of a Public Speaker', 'author': 'Scott Berkun'}, {'name': 'Javascript, the Good Parts', 'author': 'Douglas Crockford'}]">
     <h2>Your Online Bookshop</h2>
+    <input type="search" ng-model="criteria">
     <ul class="unstyled">
-      <li ng-repeat="book in books | orderBy: 'name'">
+      <li ng-repeat="book in books | filter:criteria | orderBy: 'name'">
         <span>{{book.name}} written by {{book.author | uppercase}}</span>
       </li>
     </ul>
